@@ -163,18 +163,15 @@
 
 .we-section{
   background-color: #fff;
-  height: 1200px;
+  height: 200vh;
   background-image: linear-gradient(to left bottom, #000000, #2f272f, #4d4e64, #577d9a, #59b1c4);  padding-top: 40px
-
 }
 
 .we-container{
   height: 100%;
-
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-
   align-items: center;
 }
 
@@ -217,6 +214,7 @@
   margin-top: 25px
 
 }
+
 .we-right img{
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   border-radius: 5px;
@@ -229,48 +227,247 @@
   text-transform: uppercase;
 }
 
-.we-profile-container{
-
-}
 .we-profile-pic{
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   overflow: hidden;
 }
 
-.we-profile-card{
-  background-color: white;
-  border-radius: 10px;
-  padding: 30px;
+
+.we-profile-container .encabezado h2{
+ color: #fff;
+ text-align: center;
+ font-weight: 900;
+ text-transform: uppercase;
+
+}
+
+.we-profile-container .encabezado hr{
+  width: 100px;
+  background-color: #fff;
+  height: 5px;
+  
+
+}
+
+slider{
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  height: 400px;
+  position: relative;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
 }
 
-.we-profile-card i{
-  color: black
+slider> *{
+  overflow: hidden;
+  display: block;
+
+  height: 400px;
+  position: absolute;
+  animation: slide 33s infinite;
+
+
 }
 
-
-.we-profile-card h3{
+slide h2{
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
   font-weight: 900;
   text-transform: uppercase;
-  color: #000
+  color: #fff
 }
 
-.we-profile-card h4{
-  font-size: 14px;
-  font-weight: 300;
+slide h3{
+  font-size: 20px;
   text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+slide i{
+  color: white;
+  font-size: 20px;
+  margin-top: 20px
 }
 
 
+ slide:nth-child(1){
+  left: 100%;
+  height: 100%;
+  animation-delay: 0s;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../img/nosotros/chrisfondo.jpg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+slide:nth-child(2){
+  left: 100%;
+  height: 100%;
+  animation-delay: 3s;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../img/nosotros/gabsfondo.jpg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+
+slide:nth-child(3){
+  left: 100%;
+  height: 100%;
+  animation-delay: 6s;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../img/nosotros/mariafondo.jpg');
+
+  background-size: cover;
+  background-position: center;
+
+}
+
+
+slide:nth-child(4){
+  left: 100%;
+  height: 100%;
+  animation-delay: 9s;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../img/nosotros/edsonfondo.jpg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+
+slide:nth-child(5){
+  left: 100%;
+  height: 100%;
+  animation-delay: 12s;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../img/nosotros/chrisfondo.jpg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+
+slide:nth-child(6){
+  left: 100%;
+  height: 100%;
+  animation-delay: 15s;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../img/nosotros/chrisfondo.jpg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+
+slide:nth-child(7){
+  left: 100%;
+  height: 100%;
+  animation-delay: 18s;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../img/nosotros/chrisfondo.jpg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+
+slide:nth-child(8){
+  left: 100%;
+  height: 100%;
+  animation-delay: 21s;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../img/nosotros/chrisfondo.jpg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+
+slide:nth-child(9){
+  left: 100%;
+  height: 100%;
+  animation-delay: 24s;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../img/nosotros/chrisfondo.jpg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+
+slide:nth-child(10){
+  left: 100%;
+  height: 100%;
+  animation-delay: 27s;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../img/nosotros/chrisfondo.jpg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+slide:nth-child(11){
+  left: 100%;
+  height: 100%;
+  animation-delay: 30s;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../img/nosotros/chrisfondo.jpg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+
+@keyframes slide {
+  0%{ left: 100%; width: 100%}
+  3%{ left: 0%; }
+  9%{ left: 0%; }
+  13%{ left: -100%; width: 100%}
+  13.0001%{ left: -100%; width: 0%}
+  100%{ left: 100%; width: 0%}
+}
 
 
 
