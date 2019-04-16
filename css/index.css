@@ -1,33 +1,153 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,900');
 
-/* #myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  opacity: 0.3
-} */
 
 *{
   font-family: 'Montserrat', sans-serif;
 }
 
+/*----------------------------------------- VARIOS---------------------------------- */
+.texto{
+  position: absolute;
+  z-index: 1
+}
+.flex{
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container{
+  height: 300px;
+  width: 300px;
+  background-color: transparent;
+  overflow: hidden;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.nav-logo{
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+  padding: 30px;
+  display: flex;
+  justify-content: flex-start;
+  animation: appear 4s;
+}
+
+@keyframes appear {
+ 0%{
+   opacity: 0
+ }
+ 50%{
+   opacity: 0
+ }
+ 100%{
+   opacity: 1
+ }
+}
+
+.burger{
+  position: fixed;
+  width: 100%;
+  z-index: 4;
+  padding: 30px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: transparent
+}
+
+.burger button:hover{
+  background-color: #fff;
+}
+
+.burger button{
+  background-color: transparent;
+}
+
+.burger button:hover{
+  background-color: #fff;
+}
+
+.burger i{
+  font-size: 30px;
+  color: white
+}
+
+.burger i:hover{
+    color: #000;
+}
+
+.menu{
+  position: fixed;
+  height: 100vh;
+  background-color: #000;
+  margin-left: -300px;
+  color: #fff;
+  z-index: 3;
+  padding: 30px;
+  display: flex;
+  justify-content: flex-end;
+  transition: all 1s ease-in-out
+}
+
+.menu li{
+  list-style: none;
+}
+.menu p{
+  font-size: 18px;
+  margin-bottom: 30px
+}
+
+.levitate {
+  animation: do-levitation 1.2s alternate ease-in-out infinite;
+}
+
+@keyframes do-levitation {
+  0% {
+    transform: translate(0, 0);
+
+  }
+  100% {
+    transform: translate(0, 0.5em);
+
+  }
+}
+
+@media (max-width:992px) {
+  .burger i {
+    font-size: 46px;
+  }
+  .nav-logo {
+    width: 130px;
+    height: 130px;
+  }
+  .menu {
+    margin-left: -550px;
+    width: 490px;
+  }
+}
+
+/*----------------------------------------- PORTADA---------------------------------- */
 .portada-section{
   background-color: #000;
   height: 100vh;
-
 }
-
-
 .portada-img{
-  background-color: green;
+  background-color: #000;
   background-image: url("../img/6.jpg");
   background-size: cover;
   background-position-x: -250px;
   height: 100vh;
-  opacity: 0.4;
-
+  z-index: 2;
 }
 .portada-text{
   background-color: #000;
@@ -59,112 +179,30 @@
   color: #000
 }
 
-.texto{
-  position: absolute;
-  z-index: 1
+@media (max-width:992px) {
+  .portada-img{
+    background-position-x: -850px;
+  }
+  .portada-text h1 {
+    font-size: 90px;
+  }
+  .portada-text h2 {
+    margin-bottom: 900px;
+  }
+  .logo-container {
+    height: 400px;
+    width: 400px;
+  }
+
 }
 
-
-
-.flex{
-  position: absolute;
-  z-index: 0;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  display: flex;
-  flex-direction:column;
-  align-items: center;
-  justify-content: center;
-}
-
-
-
-.logo-container{
-  height: 300px;
-  width: 300px;
-  background-color: transparent;
-  overflow: hidden;
-  border-radius: 50%;
-  position: absolute;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-
-.nav-logo{
-  position: fixed;
-  width: 100px;
-  height: 100px;
-  z-index: 0;
-  padding: 30px;
-  display: flex;
-  justify-content: flex-start;
-  animation: appear 4s;
-}
-@keyframes appear {
- 0%{
-   opacity: 0
- }
- 50%{
-   opacity: 0
- }
- 100%{
-   opacity: 1
- }
-}
-
-.burger{
-  position: fixed;
-  width: 100%;
-  z-index: 1;
-  padding: 30px;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.burger button{
-  background-color: #000;
-}
-
-.burger button:hover{
-  background-color: #fff;
-}
-
-.burger i{
-  font-size: 30px;
-  color: white
-}
-
-.burger i:hover{
-    color: #000;
-}
-
-.menu{
-  position: fixed;
-  height: 100vh;
-  background-color: #000;
-  margin-left: -300px;
-  color: #fff;
-  z-index: 1;
-  padding: 30px;
-  display: flex;
-  justify-content: flex-end;
-  transition: all 1s ease-in-out
-}
-
-.menu li{
-  list-style: none;
-}
-.menu p{
-  font-size: 18px;
-  margin-bottom: 30px
-}
-
-
+/*----------------------------------------- NOSOTROS---------------------------------- */
 
 .we-section{
   background-color: #fff;
   height: 200vh;
-  background-image: linear-gradient(to left bottom, #000000, #2f272f, #4d4e64, #577d9a, #59b1c4);  padding-top: 40px
+  background-image: linear-gradient(to left bottom, #000000, #2f272f, #4d4e64, #577d9a, #59b1c4);
+  padding-top: 40px
 }
 
 .we-container{
@@ -235,21 +273,21 @@
   overflow: hidden;
 }
 
+.we-profile-container .encabezado {
+ margin-bottom: 50px
+}
 
 .we-profile-container .encabezado h2{
  color: #fff;
  text-align: center;
  font-weight: 900;
  text-transform: uppercase;
-
 }
 
 .we-profile-container .encabezado hr{
   width: 100px;
   background-color: #fff;
   height: 5px;
-  
-
 }
 
 slider{
@@ -267,7 +305,7 @@ slider> *{
 
   height: 400px;
   position: absolute;
-  animation: slide 33s infinite;
+  animation: slide 66s infinite;
 
 
 }
@@ -313,7 +351,7 @@ slide i{
 slide:nth-child(2){
   left: 100%;
   height: 100%;
-  animation-delay: 3s;
+  animation-delay: 6s;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -328,7 +366,7 @@ slide:nth-child(2){
 slide:nth-child(3){
   left: 100%;
   height: 100%;
-  animation-delay: 6s;
+  animation-delay: 12s;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -344,7 +382,7 @@ slide:nth-child(3){
 slide:nth-child(4){
   left: 100%;
   height: 100%;
-  animation-delay: 9s;
+  animation-delay: 18s;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -359,7 +397,7 @@ slide:nth-child(4){
 slide:nth-child(5){
   left: 100%;
   height: 100%;
-  animation-delay: 12s;
+  animation-delay: 24s;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -374,7 +412,7 @@ slide:nth-child(5){
 slide:nth-child(6){
   left: 100%;
   height: 100%;
-  animation-delay: 15s;
+  animation-delay: 30s;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -389,7 +427,7 @@ slide:nth-child(6){
 slide:nth-child(7){
   left: 100%;
   height: 100%;
-  animation-delay: 18s;
+  animation-delay: 36s;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -404,7 +442,7 @@ slide:nth-child(7){
 slide:nth-child(8){
   left: 100%;
   height: 100%;
-  animation-delay: 21s;
+  animation-delay: 42s;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -419,7 +457,7 @@ slide:nth-child(8){
 slide:nth-child(9){
   left: 100%;
   height: 100%;
-  animation-delay: 24s;
+  animation-delay: 48s;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -434,7 +472,7 @@ slide:nth-child(9){
 slide:nth-child(10){
   left: 100%;
   height: 100%;
-  animation-delay: 27s;
+  animation-delay: 54s;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -448,7 +486,7 @@ slide:nth-child(10){
 slide:nth-child(11){
   left: 100%;
   height: 100%;
-  animation-delay: 30s;
+  animation-delay: 60s;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -456,9 +494,15 @@ slide:nth-child(11){
   background-image: url('../img/nosotros/chrisfondo.jpg');
   background-size: cover;
   background-position: center;
-
 }
 
+.display-responsive{
+  display: none;
+}
+
+.display-reverse-responsive{
+  display: block;
+}
 
 @keyframes slide {
   0%{ left: 100%; width: 100%}
@@ -469,37 +513,118 @@ slide:nth-child(11){
   100%{ left: 100%; width: 0%}
 }
 
-
-
-.levitate {
-  animation: do-levitation 1.2s alternate ease-in-out infinite;
+@media (max-width:992px) {
+  .we-section{
+    height: 160vh
+  }
+  .we-left {
+    padding-left: 15px;
+  }
+  .we-left .encabezado {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .we-left .encabezado h2 {
+    font-size: 70px;
+  }
+  .we-left hr {
+    top: 120px;
+    left: 440px;
+  }
+  .we-left .we-text {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 40px;
+  }
+  .we-left .we-text p {
+    font-size: 23px;
+    margin-top: 40px;
+  }
+  .we-left img {
+    width: auto;
+    margin-left: 30px;
+    margin-right: 30px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border-radius: 5px;
+    z-index: 0;
+  }
+  .display-responsive{
+    display: block;
+  }
+  .display-reverse-responsive{
+    display: none;
+  }
+  .we-profile-container .encabezado h2 {
+    font-size: 70px;
+    margin-bottom: 30px;
+  }
+  slider {
+    height: 900px;
+  }
+  slide h2 {
+    font-size: 54px;
+  }
+  .we-profile-pic {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  slide h3 {
+    font-size: 26px;
+  }
+  slide i {
+    font-size: 38px;
+    margin-top: 30px;
+  }
 }
 
-.levitate1 {
-  animation: do-levitation1 1.2s alternate ease-in-out infinite;
-}
-.levitate2 {
-  animation: do-levitation2 1.2s alternate ease-in-out infinite;
-}
+/*----------------------------------------- NOSOTROS---------------------------------- */
 
-@keyframes do-levitation {
-  0% {
-    transform: translate(0, 0);
-
-  }
-  100% {
-    transform: translate(0, 0.5em);
-
-  }
+.coop-section{
+  background-color: #eaeaea;
+  height: 500px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes do-levitation1 {
-  0% {
-    transform: translate(0, 0);
+.coop-section .encabezado h2{
+  color: #000
+}
 
-  }
-  100% {
-    transform: translate(0, -0.5em);
+.coop-section .encabezado p{
+  color: #000
+}
 
-  }
+.coop-section .encabezado hr{
+  background-color: #000
+}
+
+.coop-section .we-text p{
+  color: #000
+}
+
+.coop-section .we-text p{
+  color: #000
+}
+.coop-section .we-right{
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+.coop-section .text-center i{
+  color: #000;
+  font-size: 80px
+}
+
+
+/*----------------------------------------- NOSOTROS---------------------------------- */
+
+.work-section{
+  background-color: #fff;
+  height: 200vh;
 }
