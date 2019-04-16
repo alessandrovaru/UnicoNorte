@@ -614,11 +614,23 @@ slide:nth-child(11){
   display: flex;
   align-items: center;
   justify-content: space-around;
-  
+
 }
 .coop-section .text-center i{
   color: #000;
   font-size: 80px
+}
+
+@media (max-width:992px) {
+  .coop-section{
+
+    height: 1000px;
+
+  }
+  .coop-section .encabezado hr{
+    background-color: #000;
+    top: 230px;
+  }
 }
 
 
